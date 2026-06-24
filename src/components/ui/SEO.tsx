@@ -13,10 +13,11 @@ export default function SEO({ route }: SEOProps) {
     let pageDescription = "Harish Cinemas is a premium Chennai-based independent film production house behind the celebrated Tamil suspense thriller 'Naruvee' and upcoming drama 'Nalla Padam'. Explore exclusive trailers, behind-the-scenes content, and news.";
     let pageKeywords = "Harish Cinemas, Tamil movie production, Chennai film studio, Harish Pandian, independent Tamil cinema";
     let dynamicSchema: any = null;
+    let breadcrumbSchema: any = null;
 
     // Helper to generate full URLs for canonical paths
     const getCanonicalUrl = (hashPath: string) => {
-      const base = "https://x.com/harish_cinemas"; // Primary channel
+      const base = "https://www.harishcinemas.com"; // Primary domain
       return `${base}/${hashPath}`;
     };
 
@@ -30,18 +31,38 @@ export default function SEO({ route }: SEOProps) {
       pageName = "Stories That Inspire. Cinema That Matters.";
       pageTitle = `${brand} | ${pageName}`;
       pageDescription = "Harish Cinemas is Chennai's premium independent film studio producing high-impact cinematic offerings, behind Naruvee and Nalla Padam.";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"}
+        ]
+      };
     } 
     else if (route === "#/about") {
       pageName = "About Executive Leadership & Artistic Principles";
       pageTitle = `${pageName} — ${brand}`;
-      pageDescription = "Learn about Founder DR. A. Harish Pandian, Producer A. Alagu Pandian, and the artistic principles guiding Harish Cinemas in drafting high-impact independent Tamil screenplays.";
+      pageDescription = "Learn about Founder A. Alagu Pandian and the artistic principles guiding Harish Cinemas in drafting high-impact independent Tamil screenplays.";
       pageKeywords = "About Harish Cinemas, Harish Cinemas founder, Alagu Pandian producer, Tamil cinema leadership, Chennai film team";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "About", "item": "https://www.harishcinemas.com/#/about"}
+        ]
+      };
     } 
     else if (route === "#/productions") {
       pageName = "Official Independent Film Productions Catalog";
       pageTitle = `${pageName} — ${brand}`;
       pageDescription = "Browse our high-quality independent cinema projects including celebrated thriller Naruvee and upcoming socio-drama Nalla Padam.";
       pageKeywords = "Tamil movie roster, Harish Cinemas films, Naruvee release, Nalla Padam cast, Chennai movies catalog";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "Productions", "item": "https://www.harishcinemas.com/#/productions"}
+        ]
+      };
     } 
     else if (route.startsWith("#/productions/")) {
       const slug = route.substring("#/productions/".length);
@@ -66,8 +87,17 @@ export default function SEO({ route }: SEOProps) {
           "productionCompany": {
             "@type": "Organization",
             "name": "Harish Cinemas",
-            "url": "https://x.com/harish_cinemas"
+            "url": "https://www.harishcinemas.com"
           }
+        };
+
+        breadcrumbSchema = {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+            {"@type": "ListItem", "position": 2, "name": "Productions", "item": "https://www.harishcinemas.com/#/productions"},
+            {"@type": "ListItem", "position": 3, "name": movie.title, "item": `https://www.harishcinemas.com/#/productions/${slug}`}
+          ]
         };
       }
     } 
@@ -76,24 +106,52 @@ export default function SEO({ route }: SEOProps) {
       pageTitle = `${pageName} — ${brand}`;
       pageDescription = "Stay ahead with Harish Cinemas' upcoming releases, rustic schedule shoots, casting announcements, and Tamil scripts under development in Chennai.";
       pageKeywords = "upcoming Tamil movies, new movie releases 2026 Chennai, film pre-production, next film Alagu Pandian";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "Upcoming Projects", "item": "https://www.harishcinemas.com/#/upcoming-projects"}
+        ]
+      };
     } 
     else if (route === "#/gallery") {
       pageName = "Key Art & Creative Production Gallery";
       pageTitle = `${pageName} — ${brand}`;
       pageDescription = "Peruse official movie stills, production event highlights, launch functions in Chennai, and raw behind-the-scenes snaps.";
       pageKeywords = "Naruvee photo gallery, behind the scenes movie photos, theater premiere launch media, Chennai cine events";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.harishcinemas.com/#/gallery"}
+        ]
+      };
     } 
     else if (route === "#/videos") {
       pageName = "Cinema Teasers, Videos & Trailers";
       pageTitle = `${pageName} — ${brand}`;
       pageDescription = "Watch official high-fidelity full trailers, suspense teasers, musical theme songs, and exclusive sets construction diaries.";
       pageKeywords = "Naruvee trailer, high quality Tamil movie teaser, Kannupada Podhum song video, Harish Cinemas sound track";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "Videos", "item": "https://www.harishcinemas.com/#/videos"}
+        ]
+      };
     } 
     else if (route === "#/news") {
       pageName = "Press Room & Media Dispatches";
       pageTitle = `${pageName} — ${brand}`;
       pageDescription = "Get the latest official news, major press releases, and production crew announcements directly from our operations desk.";
       pageKeywords = "Harish Cinemas news, Tamil cinema industry blog, Chennai media press release, Nalla Padam movie announcement";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "News", "item": "https://www.harishcinemas.com/#/news"}
+        ]
+      };
     } 
     else if (route.startsWith("#/news/")) {
       const slug = route.substring("#/news/".length);
@@ -126,6 +184,15 @@ export default function SEO({ route }: SEOProps) {
             "name": "Harish Cinemas Operations Desk"
           }
         };
+
+        breadcrumbSchema = {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+            {"@type": "ListItem", "position": 2, "name": "News", "item": "https://www.harishcinemas.com/#/news"},
+            {"@type": "ListItem", "position": 3, "name": article.title, "item": `https://www.harishcinemas.com/#/news/${slug}`}
+          ]
+        };
       }
     } 
     else if (route === "#/contact") {
@@ -133,12 +200,26 @@ export default function SEO({ route }: SEOProps) {
       pageTitle = `${pageName} — ${brand}`;
       pageDescription = "Get in touch for script pitches, film distributions, co-production options, media clearances, and VIP dispatch options in Chennai.";
       pageKeywords = "Contact Harish Cinemas, Adyar Chennai cinema address, submit screenplay Tamil movie, producer email Chennai, cinematic business";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.harishcinemas.com/#/contact"}
+        ]
+      };
     }
     else if (route === "#/crew-credits") {
       pageName = "Crew & Credits";
       pageTitle = `${brand} | ${pageName}`;
       pageDescription = "Official comprehensive list of department credits, talented cast, production crew memberships, and technical technicians of Harish Cinemas.";
       pageKeywords = "Harish Cinemas crew, Tamil movie credits, Nalla Padam crew members, Naruvee production crew, Chennai film technicians";
+      breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+          {"@type": "ListItem", "position": 2, "name": "Crew & Credits", "item": "https://www.harishcinemas.com/#/crew-credits"}
+        ]
+      };
     }
 
     // 3. Update DOM Elements
@@ -200,11 +281,20 @@ export default function SEO({ route }: SEOProps) {
       existingDynamicScript.remove();
     }
 
-    if (dynamicSchema) {
+    // Combine breadcrumb with page-specific schema
+    const combinedSchema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        ...(breadcrumbSchema ? [breadcrumbSchema] : []),
+        ...(dynamicSchema ? [dynamicSchema] : [])
+      ]
+    };
+
+    if (combinedSchema["@graph"].length > 0) {
       const script = document.createElement("script");
       script.id = "hc-dynamic-seo-schema";
       script.type = "application/ld+json";
-      script.text = JSON.stringify(dynamicSchema);
+      script.text = JSON.stringify(combinedSchema);
       document.head.appendChild(script);
     }
   }, [route]);

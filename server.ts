@@ -108,9 +108,9 @@ async function startServer() {
   // Secure operational reverse proxy for Contact submissions to protect harishcinemas1977@gmail.com from scraper bots
   app.post("/api/contact", async (req, res) => {
     try {
-      const { name, email, message } = req.body;
-      if (!name || !email || !message) {
-        res.status(400).json({ success: false, message: "Required parameters (name, email, message) are missing." });
+      const { name, email, mobile, message } = req.body;
+      if (!name || !email || !mobile || !message) {
+        res.status(400).json({ success: false, message: "Required parameters (name, email, mobile, message) are missing." });
         return;
       }
 
@@ -125,6 +125,7 @@ async function startServer() {
         body: JSON.stringify({
           Name: name,
           Email: email,
+          Mobile: mobile,
           Message: message,
           _subject: `🎬 Harish Cinemas: New Contact Message from ${name}`,
           _honey: "", // Honeypot spam protector
@@ -132,7 +133,7 @@ async function startServer() {
       });
 
       const responseData = await response.json();
-      res.json(responseData);
+      res.status(response.ok ? 200 : response.status).json(responseData);
     } catch (err: any) {
       console.error("[FORM ACTION EXCLUSION] Failed to dispatch through endpoint proxy:", err);
       res.status(500).json({ 

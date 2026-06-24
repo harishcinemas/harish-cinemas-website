@@ -62,7 +62,7 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Force touch all fields on submission attempt
@@ -74,23 +74,39 @@ export default function ContactForm() {
       return;
     }
 
-    setStatus("success");
+    setStatus("sending");
     setErrorMessage("");
 
     try {
-      const subject = encodeURIComponent(`Inquiry from ${formData.name} - Harish Cinemas`);
-      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\n\nMessage:\n${formData.message}`);
-      
-      // Triggering mailto action directly
-      window.location.href = `mailto:harishcinemas1977@gmail.com?subject=${subject}&body=${body}`;
-      
-      // Reset form states
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          mobile: formData.mobile,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || result.success === false) {
+        setStatus("error");
+        setErrorMessage(result.message || "Unable to send your message at this time. Please try again later.");
+        return;
+      }
+
+      setStatus("success");
+      setErrorMessage("");
       setFormData({ name: "", email: "", mobile: "", message: "" });
       setTouched({ name: false, email: false, mobile: false, message: false });
     } catch (err) {
       console.error("[CONTACT TRANSMISSION ERROR]", err);
       setStatus("error");
-      setErrorMessage("An error occurred trying to launch your mail client. Please send email directly manually to harishcinemas1977@gmail.com.");
+      setErrorMessage("An error occurred while sending your message. Please try again or email harishcinemas1977@gmail.com directly.");
     }
   };
 

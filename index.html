@@ -24,8 +24,8 @@
     <meta property="og:site_name" content="Harish Cinemas" />
     <meta property="og:title" content="Harish Cinemas | Stories That Inspire. Cinema That Matters." />
     <meta property="og:description" content="Premium Chennai-based Tamil independent film production house behind the critically acclaimed suspense horror-thriller 'Naruvee'." />
-    <meta property="og:url" content="https://x.com/harish_cinemas" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:url" content="https://www.harishcinemas.com" />
+    <meta property="og:image" content="https://www.harishcinemas.com/og-image.jpg" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="ta_IN" />
 
@@ -35,10 +35,10 @@
     <meta name="twitter:creator" content="@harish_cinemas" />
     <meta name="twitter:title" content="Harish Cinemas | Independent Tamil Film Studio" />
     <meta name="twitter:description" content="Explore exclusive movie releases, behind-the-scenes, and trailers from Chennai's premier cinematic house." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80" />
+    <meta name="twitter:image" content="https://www.harishcinemas.com/og-image.jpg" />
 
     <!-- Canonical Tag and Prefixes -->
-    <link rel="canonical" href="https://x.com/harish_cinemas" />
+    <link rel="canonical" href="https://www.harishcinemas.com" />
     
     <!-- Google Search Console DNS Verification / Analytics Code Hook Placeholders -->
     <meta name="google-site-verification" content="harishcinemas-verification-id-filler" />
@@ -49,153 +49,278 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "MovieStudio",
-            "@id": "https://x.com/harish_cinemas/#organization",
+            "@type": ["Organization", "LocalBusiness", "Corporation"],
+            "@id": "https://www.harishcinemas.com/#organization",
             "name": "Harish Cinemas",
-            "alternateName": "Harish Cinemas Madras",
-            "url": "https://x.com/harish_cinemas",
-            "logo": "https://upload.wikimedia.org/wikipedia/en/3/38/Naruvee.jpg",
-            "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
+            "alternateName": ["Harish Cinemas Madras", "Harish Cinemas Chennai", "ஹரிஷ் சினிமாஸ்"],
+            "url": "https://www.harishcinemas.com",
+            "logo": "https://www.harishcinemas.com/logo.svg",
+            "image": "https://www.harishcinemas.com/og-image.jpg",
             "description": "Premium Chennai-based independent film production house behind the celebrated Tamil suspense horror-thriller Naruvee and upcoming socio-drama Nalla Padam.",
+            "brand": "Harish Cinemas - Stories That Inspire. Cinema That Matters.",
             "founder": {
               "@type": "Person",
-              "name": "DR. A. Harish Pandian"
+              "name": "A. Alagu Pandian",
+              "url": "https://www.harishcinemas.com/#/about"
             },
             "foundingDate": "2024",
+            "areaServed": ["IN-TN", "IN", "Tamil Nadu", "Chennai"],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Parameshwari Nagar, Adyar",
               "addressLocality": "Chennai",
               "addressRegion": "Tamil Nadu",
               "postalCode": "600020",
-              "addressCountry": "IN"
+              "addressCountry": "IN",
+              "geoCoordinates": {
+                "@type": "GeoCoordinates",
+                "latitude": "13.0012",
+                "longitude": "80.2565"
+              }
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "email": "harishcinemas1977@gmail.com",
-              "contactType": "corporate desk",
-              "areaServed": "IN",
-              "availableLanguage": ["English", "Tamil"]
+            "geo": {
+              "@type": "GeoShape",
+              "areaServed": "IN-TN",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "13.0012",
+                "longitude": "80.2565"
+              }
             },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91-9876543210",
+                "contactType": "Corporate Desk",
+                "email": "harishcinemas1977@gmail.com",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Tamil"]
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "Script Submission",
+                "email": "harishcinemas1977@gmail.com",
+                "areaServed": "IN"
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "Media Inquiries",
+                "email": "harishcinemas1977@gmail.com"
+              }
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "10:00",
+                "closes": "18:00",
+                "description": "Corporate office hours"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "12:00",
+                "closes": "17:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Sunday"],
+                "opens": "15:00",
+                "closes": "20:00",
+                "description": "Screening room operations"
+              }
+            ],
+            "priceRange": "$$",
             "sameAs": [
-              "https://x.com/harish_cinemas",
+              "https://twitter.com/harish_cinemas",
               "https://www.instagram.com/harish_cinemas/",
               "https://www.facebook.com/profile.php?id=61590852898474",
               "https://www.youtube.com/@HARISHCINEMAS"
-            ]
+            ],
+            "knowsAbout": ["Tamil Cinema", "Independent Film Production", "Suspense Thrillers", "Drama Films", "Social Cinema"]
           },
           {
             "@type": "Movie",
-            "@id": "https://x.com/harish_cinemas/#movie-naruvee",
+            "@id": "https://www.harishcinemas.com/#movie-naruvee",
             "name": "Naruvee",
-            "alternativeHeadline": "நருவி",
-            "description": "A celebrated independent Tamil psychological suspense horror-thriller written and directed by Subarak Mubarak, starring Harish Pandian and Vinchu Rachel.",
-            "genre": ["Suspense", "Thriller", "Horror"],
-            "dateCreated": "2024",
+            "alternativeHeadline": "நருவி | Harish Cinemas Suspense Thriller",
+            "description": "A celebrated independent Tamil psychological suspense horror-thriller written and directed by Subarak Mubarak, starring DR. A. Harish Pandian and Vinchu Rachel. Extensively praised by Dina Thanthi and major Tamil publications for blending social messaging into suspense cinema.",
+            "genre": ["Suspense", "Thriller", "Horror", "Psychological Thriller"],
+            "dateCreated": "2025-01-01",
+            "datePublished": "2025-01-01",
+            "inLanguage": "ta",
+            "contentRating": "UA",
             "director": {
+              "@type": "Person",
+              "name": "Subarak Mubarak",
+              "url": "https://www.harishcinemas.com/#/productions/naruvee"
+            },
+            "screenplayBy": {
               "@type": "Person",
               "name": "Subarak Mubarak"
             },
             "actor": [
-              {
-                "@type": "Person",
-                "name": "Harish Pandian"
-              },
-              {
-                "@type": "Person",
-                "name": "Vinchu Rachel"
-              }
+              {"@type": "Person", "name": "DR. A. Harish Pandian"},
+              {"@type": "Person", "name": "Vinchu Rachel Sam"},
+              {"@type": "Person", "name": "Chatherin Varuna"},
+              {"@type": "Person", "name": "Padine Kumar"},
+              {"@type": "Person", "name": "VJ Pappu"}
             ],
-            "publisher": {
-              "@id": "https://x.com/harish_cinemas/#organization"
-            },
+            "composer": {"@type": "Person", "name": "Ashwath"},
+            "cinematography": {"@type": "Person", "name": "Anand Rajendran"},
+            "editor": {"@type": "Person", "name": "Subarak Mubarak"},
+            "producer": {"@type": "Person", "name": "A. Alagu Pandian"},
+            "productionCompany": {"@id": "https://www.harishcinemas.com/#organization"},
+            "publisher": {"@id": "https://www.harishcinemas.com/#organization"},
             "image": "https://upload.wikimedia.org/wikipedia/en/3/38/Naruvee.jpg",
-            "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/3/38/Naruvee.jpg"
+            "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/en/3/38/Naruvee.jpg",
+            "url": "https://www.harishcinemas.com/#/productions/naruvee"
           },
           {
             "@type": "Movie",
-            "@id": "https://x.com/harish_cinemas/#movie-nalla-padam",
+            "@id": "https://www.harishcinemas.com/#movie-nalla-padam",
             "name": "Nalla Padam",
-            "alternativeHeadline": "நல்ல படம்",
-            "description": "An upcoming independent Tamil family drama film starring Dr. A. Harish, Dhanalakshmi, Nassar, Aravind Swamy, Mottai Rajendran, Kalki Raja, and Rama.",
-            "genre": ["Socio-Drama", "Family", "Rural Drama"],
-            "dateCreated": "2026",
+            "alternativeHeadline": "நல்ல படம் | Harish Cinemas Family Drama",
+            "description": "An upcoming independent Tamil family drama in post-production, starring legendary character actors Nassar and Aravind Swamy alongside Dr. A. Harish, Dhanalakshmi, Mottai Rajendran, Kalki Raja, and Rama. A story designed with pure cinematic sincerity, exploring authentic local relationships and community bonds in South India.",
+            "genre": ["Drama", "Socio-Drama", "Family Drama"],
+            "dateCreated": "2026-06-01",
+            "inLanguage": "ta",
+            "contentRating": "UA",
             "director": {
               "@type": "Person",
-              "name": "Subarak Mubarak"
+              "name": "Praburam.C"
+            },
+            "screenplayBy": {
+              "@type": "Person",
+              "name": "Praburam.C"
             },
             "actor": [
-              {
-                "@type": "Person",
-                "name": "Dr. A. Harish"
-              },
-              {
-                "@type": "Person",
-                "name": "Dhanalakshmi"
-              },
-              {
-                "@type": "Person",
-                "name": "Nassar"
-              },
-              {
-                "@type": "Person",
-                "name": "Aravind Swamy"
-              },
-              {
-                "@type": "Person",
-                "name": "Mottai Rajendran"
-              },
-              {
-                "@type": "Person",
-                "name": "Kalki Raja"
-              },
-              {
-                "@type": "Person",
-                "name": "Rama"
-              }
+              {"@type": "Person", "name": "Dr. A. Harish"},
+              {"@type": "Person", "name": "Nassar"},
+              {"@type": "Person", "name": "Aravind Swamy"},
+              {"@type": "Person", "name": "Dhanalakshmi"},
+              {"@type": "Person", "name": "Mottai Rajendran"},
+              {"@type": "Person", "name": "Kalki Raja"},
+              {"@type": "Person", "name": "Rama"}
             ],
-            "publisher": {
-              "@id": "https://x.com/harish_cinemas/#organization"
-            },
-            "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80"
+            "composer": {"@type": "Person", "name": "Sagishna Xavier"},
+            "cinematography": {"@type": "Person", "name": "Iniyan J. Harris"},
+            "editor": {"@type": "Person", "name": "B.R. Prakash"},
+            "producer": {"@type": "Person", "name": "A. Alagu Pandian"},
+            "productionCompany": {"@id": "https://www.harishcinemas.com/#organization"},
+            "publisher": {"@id": "https://www.harishcinemas.com/#organization"},
+            "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
+            "url": "https://www.harishcinemas.com/#/productions/nalla-padam"
           },
           {
             "@type": "FAQPage",
-            "@id": "https://x.com/harish_cinemas/#faq",
+            "@id": "https://www.harishcinemas.com/#faq",
             "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Harish Cinemas? Who founded it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Harish Cinemas is a premium independent Tamil film production house based in Chennai, Adyar, founded by A. Alagu Pandian. Established in 2024, we are dedicated to 'Stories That Inspire. Cinema That Matters.' Our focus is script-first independent Tamil storytelling that prioritizes authentic human connections, regional truths, and emotional sincerity. We produced the critically acclaimed suspense thriller 'Naruvee' and are currently in post-production on the family drama 'Nalla Padam'."
+                }
+              },
               {
                 "@type": "Question",
                 "name": "What is the artistic philosophy behind Harish Cinemas?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We adhere strictly to 'Stories That Inspire. Cinema That Matters.' Our focus is purely script-first independent Tamil storytelling, prioritizing raw human connections, authentic regional truths, and emotional sincerity over standardized box-office formulas."
+                  "text": "We adhere strictly to our motto: 'Stories That Inspire. Cinema That Matters.' Our focus is purely script-first independent Tamil storytelling, prioritizing raw human connections, authentic regional truths, and emotional sincerity over standardized box-office formulas. Every project under the Harish Cinemas banner is crafted with precision, artistic integrity, and deep respect for Tamil cinema traditions."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Can independent screenwriters submit drama or thriller scripts?",
+                "name": "Can independent screenwriters submit Tamil film scripts to Harish Cinemas?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes! We actively support collaborative Tamil scripting. Script outlines and narrative structures can be submitted for review under strict creative guidelines via our corporate Contact Desk at Adyar, Chennai."
+                  "text": "Yes! We actively support collaborative Tamil scripting and welcome script submissions. Script outlines, narrative structures, and complete screenplays can be submitted for review under our strict creative guidelines. Contact our corporate desk at harishcinemas1977@gmail.com or visit our Contact page to submit your work."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Where are the premium post-production operations executed?",
+                "name": "Where is Harish Cinemas located?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "To ensure atmospheric depth, all critical technical operations including DI color grading, Atmos sound mix, pre-mixed stems, and Dolby Atmos mastering are executed in collaboration with leading technical houses like Royal Studios, Chennai."
+                  "text": "Harish Cinemas is headquartered in Parameshwari Nagar, Adyar, Chennai, Tamil Nadu 600020, India. Our offices operate Monday-Friday 10 AM to 6 PM, Saturday 12 PM to 5 PM, and Sunday 3 PM to 8 PM (screening room hours). We are conveniently located near major Chennai film distribution centers and post-production facilities."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What makes 'Nalla Padam' a landmark release for the banner?",
+                "name": "How do I contact Harish Cinemas for script pitches, distributions, or media inquiries?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Nalla Padam represents our flagship rustic drama. Centering a magnificent cast of seasoned character actors (including Nassar, Aravind Swamy, Mottai Rajendran, and Rama) and introducing fresh local face ensembles, it represents our most high-impact cinematic ledger to date."
+                  "text": "You can reach Harish Cinemas through multiple channels: Email: harishcinemas1977@gmail.com | Visit our Contact page at www.harishcinemas.com/#/contact | Follow us on Twitter/X @harish_cinemas | Connect on Instagram @harish_cinemas | Subscribe to our YouTube channel @HARISHCINEMAS. We respond to all script submissions, distribution inquiries, and media requests within 5-7 business days."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Tell me about 'Naruvee', the debut Harish Cinemas film.",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "'Naruvee' is our celebrated debut feature film—a psychological suspense horror-thriller written and directed by Subarak Mubarak. Released in 2025, it stars DR. A. Harish Pandian and Vinchu Rachel Sam. The film masterfully blends social messaging with intense psychological suspense. It was extensively praised by Dina Thanthi and major Tamil publications and represents Harish Cinemas' commitment to high-quality independent cinema. Theatrical distribution was handled by Baskar Cinema Company and Sivaani Studios."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is 'Nalla Padam'? When will it release?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "'Nalla Padam' (Tamil: நல்ல படம்) is Harish Cinemas' second flagship project—an independent Tamil family drama currently in post-production. Directed by Praburam.C and produced by A. Alagu Pandian, it features a magnificent ensemble cast including legendary character actors Nassar and Aravind Swamy, alongside Dr. A. Harish, Dhanalakshmi, Mottai Rajendran, Kalki Raja, and Rama. The film explores authentic local relationships, community bonds, and the quiet beauty of everyday South Indian life. Expected release: 2026."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is post-production for Harish Cinemas films handled?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To ensure atmospheric depth and technical excellence, all critical post-production operations—including DI color grading, Dolby Atmos sound mixing, pre-mixed audio stems, and Dolby Atmos mastering—are executed in collaboration with leading technical facilities such as Royal Studios in Chennai. This partnership guarantees international-quality cinematic presentation for every Harish Cinemas release."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What genres does Harish Cinemas specialize in?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Harish Cinemas specializes in independent Tamil cinema across multiple genres: suspense thrillers (as evidenced by 'Naruvee'), family dramas and socio-dramas (like 'Nalla Padam'), and character-driven narratives that prioritize authentic storytelling. We focus on scripts that combine entertainment value with meaningful social commentary and emotional authenticity."
                 }
               }
             ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.harishcinemas.com/#breadcrumbs",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.harishcinemas.com"},
+              {"@type": "ListItem", "position": 2, "name": "Productions", "item": "https://www.harishcinemas.com/#/productions"},
+              {"@type": "ListItem", "position": 3, "name": "About", "item": "https://www.harishcinemas.com/#/about"},
+              {"@type": "ListItem", "position": 4, "name": "News", "item": "https://www.harishcinemas.com/#/news"},
+              {"@type": "ListItem", "position": 5, "name": "Contact", "item": "https://www.harishcinemas.com/#/contact"}
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "@id": "https://www.harishcinemas.com/#howto-submit-script",
+            "name": "How to Submit a Script to Harish Cinemas",
+            "description": "Step-by-step guide to submitting your Tamil film script to Harish Cinemas for review",
+            "step": [
+              {"@type": "HowToStep", "position": 1, "name": "Prepare Your Script", "text": "Write and format your Tamil film script according to industry standards. Ensure your screenplay is complete with proper structure, authentic dialogue, and compelling narrative."},
+              {"@type": "HowToStep", "position": 2, "name": "Draft a Synopsis", "text": "Create a 200-300 word synopsis and a brief 50-word logline highlighting the core concept and emotional appeal of your story."},
+              {"@type": "HowToStep", "position": 3, "name": "Visit the Contact Page", "text": "Navigate to www.harishcinemas.com/#/contact to access our script submission form."},
+              {"@type": "HowToStep", "position": 4, "name": "Fill Out Submission Form", "text": "Provide your name, email, phone number, and attach your script along with synopsis. Tell us about your creative vision."},
+              {"@type": "HowToStep", "position": 5, "name": "Submit", "text": "Click transmit to send your submission to harishcinemas1977@gmail.com. Our team reviews all submissions within 5-7 business days."},
+              {"@type": "HowToStep", "position": 6, "name": "Await Feedback", "text": "We will contact you with feedback or potential next steps if your script aligns with our creative vision."}
+            ]
+          },
+          {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.harishcinemas.com/#/productions?q={search_term_string}"
+            }
           }
         ]
       }

@@ -21,9 +21,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const { name, email, message } = req.body;
-    if (!name || !email || !message) {
-      res.status(400).json({ success: false, message: "Required parameters (name, email, message) are missing." });
+    const { name, email, mobile, message } = req.body;
+    if (!name || !email || !mobile || !message) {
+      res.status(400).json({ success: false, message: "Required parameters (name, email, mobile, message) are missing." });
       return;
     }
 
@@ -38,6 +38,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       body: JSON.stringify({
         Name: name,
         Email: email,
+        Mobile: mobile,
         Message: message,
         _subject: `🎬 Harish Cinemas: New Contact Message from ${name}`,
         _honey: "", // Honeypot spam protector
