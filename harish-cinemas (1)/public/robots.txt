@@ -1,0 +1,53 @@
+# ====================================================================
+# robots.txt for Harish Cinemas | Premium Tamil Independent Film Studio
+# Optimized for Web SEO, AI Answer Engines (AEO), and Generative Search (GEO)
+# ====================================================================
+
+User-agent: *
+Allow: /
+
+# Directives for major traditional search engines
+User-agent: Googlebot
+Allow: /
+Clean-param: ref /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+User-agent: Yandex
+Allow: /
+Disallow: /api/
+
+# Expose content to state-of-the-art AI search agents & LLM scrapers (AEO & GEO Optimization)
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+
+# Specify the absolute URL to your XML sitemap for automated indexing
+Sitemap: https://x.com/harish_cinemas/sitemap.xml

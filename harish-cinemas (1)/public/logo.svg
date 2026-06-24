@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Metallic Gold Gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3B0" />
+      <stop offset="30%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA7C11" />
+      <stop offset="100%" stop-color="#5E4300" />
+    </linearGradient>
+
+    <!-- Metallic Silver/White Gradient -->
+    <linearGradient id="silver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#E2E8F0" />
+      <stop offset="70%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow Filter for Depth -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Radial Flare/Glow -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient background glow (under the logo) -->
+  <circle cx="256" cy="256" r="180" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <!-- 1. Left Filmstrip Element (Gold) -->
+    <rect x="130" y="125" width="24" height="262" rx="3" fill="url(#gold)" />
+    
+    <!-- Filmstrip Holes -->
+    <g fill="#050508">
+      <rect x="136" y="137" width="12" height="12" rx="1.5" />
+      <rect x="136" y="162" width="12" height="12" rx="1.5" />
+      <rect x="136" y="187" width="12" height="12" rx="1.5" />
+      <rect x="136" y="212" width="12" height="12" rx="1.5" />
+      <rect x="136" y="237" width="12" height="12" rx="1.5" />
+      <rect x="136" y="262" width="12" height="12" rx="1.5" />
+      <rect x="136" y="287" width="12" height="12" rx="1.5" />
+      <rect x="136" y="312" width="12" height="12" rx="1.5" />
+      <rect x="136" y="337" width="12" height="12" rx="1.5" />
+      <rect x="136" y="362" width="12" height="12" rx="1.5" />
+    </g>
+
+    <!-- 2. Golden Curved Arch (Left of H) -->
+    <path d="M 166,125 
+             C 166,125 158,180 158,256 
+             C 158,332 166,387 166,387 
+             L 202,387 
+             C 202,387 194,332 194,256 
+             C 194,180 202,125 202,125 
+             Z" 
+          fill="url(#gold)" />
+
+    <!-- 3. Interlocking Silver C-Top Hook -->
+    <path d="M 245,130 
+             H 355 
+             C 380,130 380,150 380,175 
+             V 215 
+             H 320 
+             V 180 
+             H 245 
+             Z" 
+          fill="url(#silver)" />
+
+    <!-- 4. Interlocking Silver C-Bottom Hook -->
+    <path d="M 245,382 
+             H 355 
+             C 380,382 380,362 380,337 
+             V 297 
+             H 320 
+             V 332 
+             H 245 
+             Z" 
+          fill="url(#silver)" />
+
+    <!-- 5. Golden Center Crossbar linking H to C -->
+    <path d="M 198,226 
+             H 285 
+             V 286 
+             H 198 
+             Z" 
+          fill="url(#gold)" />
+  </g>
+</svg>

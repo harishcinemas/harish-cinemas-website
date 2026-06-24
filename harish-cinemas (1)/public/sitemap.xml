@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Primary Landing / Homepage (Highest priority) -->
+  <url>
+    <loc>https://x.com/harish_cinemas/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Executive Leadership / Founders -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/about</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Productions Catalog -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/productions</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Production Detail: Naruvee Movie Page -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/productions/naruvee</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Production Detail: Nalla Padam Movie Page (Active production) -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/productions/nalla-padam</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Upcoming Roster -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/upcoming-projects</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- High Res Photo Gallery -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/gallery</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Video Trailer Hub -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/videos</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- News and Blog Main Portal -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/news</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News Article: Nalla Padam announcement -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/news/nalla-padam-production-announcement</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- News Article: Naruvee applause -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/news/naruvee-garnering-critical-applause-awards</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Office Details -->
+  <url>
+    <loc>https://x.com/harish_cinemas/#/contact</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
