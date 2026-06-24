@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", Georgia, Cambria, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-indigo-300: var(--indigo-300);
+  --color-indigo-400: var(--indigo-400);
+  --color-indigo-500: var(--indigo-500);
+  --color-indigo-600: var(--indigo-600);
+  --color-indigo-700: var(--indigo-700);
+  --color-indigo-800: var(--indigo-800);
+  --color-indigo-900: var(--indigo-900);
+
+  --color-purple-500: var(--purple-500);
+  --color-purple-600: var(--purple-600);
+  --color-purple-950: var(--purple-950);
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(129, 140, 248, 0.5);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 15px rgba(129, 140, 248, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(129, 140, 248, 0);
+    }
+  }
+
+  @keyframes whatsapp-pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes light-flash {
+    0%, 100% {
+      opacity: 0.3;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 1;
+      filter: brightness(1.7) drop-shadow(0 0 25px rgba(129, 140, 248, 0.8));
+    }
+  }
+
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-pulse-ring {
+    animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-whatsapp-pulse {
+    animation: whatsapp-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-flash-logo {
+    animation: light-flash 1.5s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+
+  .shimmer-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-sweep::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.15) 20%,
+      rgba(255, 255, 255, 0.25) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 2.5s infinite;
+    content: '';
+  }
+
+:root {
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+
+  --purple-500: #a855f7;
+  --purple-600: #9333ea;
+  --purple-950: #3b0764;
+
+  --bg-color-mod: #030305;
+  --bg-color-track: #020203;
+  --bg-color-thumb: #151522;
+  --bg-color-thumb-hover: #4f46e5;
+  
+  --custom-glow: rgba(129, 140, 248, 0.45);
+}
+
+[data-theme="classic-cinema"] {
+  --indigo-300: #fde047; /* pale gold / yellow-300 */
+  --indigo-400: #fbbf24; /* bright gold / amber-400 */
+  --indigo-500: #f59e0b; /* amber-500 */
+  --indigo-600: #d97706; /* amber-600 */
+  --indigo-700: #b45309; /* amber-700 */
+  --indigo-800: #92400e; /* amber-800 */
+  --indigo-900: #78350f; /* amber-900 */
+
+  --purple-500: #ea580c; /* rich burnt orange / gold-copper */
+  --purple-600: #c2410c; /* dark rust gold-crimson */
+  --purple-950: #431407; /* dark warm sepia base */
+
+  --bg-color-mod: #0a0704; /* warm nostalgic dark sepia-coal */
+  --bg-color-track: #060402;
+  --bg-color-thumb: #1f140a;
+  --bg-color-thumb-hover: #d97706;
+  
+  --custom-glow: rgba(251, 191, 36, 0.5);
+}
+
+  .hover-card-glow {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-card-glow:hover {
+    box-shadow: 0 0 40px -5px var(--custom-glow);
+    border-color: var(--indigo-400);
+    transform: translateY(-6px) scale(1.01);
+  }
+
+  .hover-primary-glow {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-primary-glow:hover {
+    box-shadow: 0 0 25px 0 var(--custom-glow);
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+  }
+}
+
+/* Custom class scroll bar and selections */
+body {
+  background-color: var(--bg-color-mod);
+  color: #f1f5f9;
+  transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-thumb-hover);
+}
+
+/* Hide standard system cursor on desktop mouse-guided interfaces to enable dynamic CustomCursor integration */
+@media (hover: hover) and (pointer: fine) {
+  html, body, a, button, select, input, textarea, [role="button"], .cursor-pointer {
+    cursor: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Harish Cinemas",
+  "description": "Stories That Inspire. Cinema That Matters. A premium Chennai-based independent film production house showcase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
