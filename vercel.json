@@ -13,6 +13,10 @@
       "destination": "/api/newsletter"
     },
     {
+      "source": "/api/contact",
+      "destination": "/api/contact"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
